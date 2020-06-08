@@ -245,6 +245,7 @@ export class Container {
    * @return true if given type is bound under given qualifier, false otherwise
    */
   static isBound<T>(source: Constructor<T>, qualifier?: {}): boolean {
+    qualifier = qualifier || {};
     return IoCContainer.isBound(source, qualifier);
   }
 
